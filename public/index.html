@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAN Chat & File Transfer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div>
+          <h1>局域网畅聊与极速传输</h1>
+          <p>统一的聊天与文件协作空间，专为高效团队设计。</p>
+        </div>
+        <div class="status" id="status">连接中...</div>
+      </header>
+
+      <section class="panel">
+        <div class="user-card">
+          <label for="username">昵称</label>
+          <input id="username" type="text" placeholder="请输入昵称" />
+          <button id="save-name">保存</button>
+        </div>
+        <div class="stats">
+          <div>
+            <span class="stat-title">在线状态</span>
+            <span id="online-status" class="stat-value">未连接</span>
+          </div>
+          <div>
+            <span class="stat-title">传输模式</span>
+            <span class="stat-value">局域网高速</span>
+          </div>
+          <div>
+            <span class="stat-title">安全提示</span>
+            <span class="stat-value">本地网络传输</span>
+          </div>
+        </div>
+      </section>
+
+      <main class="content">
+        <section class="chat">
+          <div class="chat-header">
+            <h2>即时消息</h2>
+            <p>高对比度气泡 + 关键动作突出</p>
+          </div>
+          <div id="messages" class="messages"></div>
+          <form id="chat-form" class="chat-input">
+            <input id="message-input" type="text" placeholder="输入消息，Enter 发送" />
+            <button type="submit">发送</button>
+          </form>
+        </section>
+
+        <section class="transfer">
+          <div class="transfer-header">
+            <h2>文件极速传输</h2>
+            <p>拖拽上传或选择文件，自动生成下载链接</p>
+          </div>
+          <div id="drop-zone" class="drop-zone">
+            <div>
+              <strong>拖拽文件到此处</strong>
+              <span>或点击按钮选择文件</span>
+            </div>
+            <input id="file-input" type="file" />
+            <button id="upload-btn" type="button">选择文件</button>
+          </div>
+          <div id="transfer-list" class="transfer-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
